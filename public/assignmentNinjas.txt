@@ -1,0 +1,36 @@
+A1.Correct Output-
+What is the correct output of the given code.
+var x='6';
+try {
+    console.log("Before throw statement");
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 5) throw "is too high";
+    //If x is not greater than 5, it logs the string "After throw statement" to the console.
+    console.log("After throw statement");
+  }
+  catch(err) {
+    console.log("Error caught : " + err);
+  }
+  finally {
+    console.log("I am in finally!");
+  }
+  Solution-Before throw statement Error caught : is too high I am in finally!
+
+Solution Description
+x is a string but it is a Number so, NaN will return false and then x is converted into a number. Since, it is greater than 5 it throws an error “is too high” and the next cole.log statement does not get executed. Error is caught and a message is displayed. Then control goes to the finally keyword and then "I am in finally!" gets printed. 
+ 
+A2.statements are true.
+sol-
+Async makes sure that a promise is returned and if it is not returned then javascript automatically wraps it in a promise which is resolved with its value.
+Await makes the code wait until the promise returns a result. It only makes the async block wait.
+Promises can be consumed by registering functions using .then and .catch methods. then() is invoked when a promise is either resolved or rejected.
+Hurray! Correct Answer
+Solution Description
+The await keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a SyntaxError .
+
+A3.A CSS Modules is a CSS file
+sol-In which all class names and animation names are scoped locally by default.-Correct
+In which all class names and animation names are scoped globally by default.-Incorrect
+In which class names are dynamically generated, unique, and mapped to the correct styles.-Correct
+Which prevents name conflicts and lets you use the same css class name in different files.-Correct
